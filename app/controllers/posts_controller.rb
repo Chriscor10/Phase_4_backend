@@ -5,7 +5,7 @@ class PostsController < ApplicationController
       end 
     
       def show 
-        post = Post.find_by(id: post_params[:id])
+        post = Post.find_by(post_params[:id])
         render json: post, include: :comments
       end
     
